@@ -69,3 +69,63 @@ Possible errors:
 | 400 Bad Request      | Required fields were invalid, not specified.                                                                         |
 | 401 Unauthorized     | The access token is invalid or has been revoked.                                                                     |
 | 403 Forbidden        | The user does not have permission to publish, or the authorId in the request path points to wrong/non-existent user. |
+
+
+
+### Obtener Catalogo de cuentas
+
+```
+GET https://amipharma.dyndns.org:{port}/api/Contabilidad/catalogo?Compania=101
+```
+Ejemplo de respuesta
+
+```
+[
+   {
+    "codigoCuenta": "1",
+    "nombreCuenta": "ACTIVOS"
+  },
+  {
+    "codigoCuenta": "11",
+    "nombreCuenta": "ACTIVOS CORRIENTES"
+  },
+  {
+    "codigoCuenta": "1100",
+    "nombreCuenta": "EFECTIVO EN CAJA Y BANCOS"
+  },
+  {
+    "codigoCuenta": "1101",
+    "nombreCuenta": "Efectivo en Caja y Bancos"
+  },
+  {
+    "codigoCuenta": "110101",
+    "nombreCuenta": "Caja General RD$"
+  },
+  {
+    "codigoCuenta": "110102",
+    "nombreCuenta": "Fondo Fijo Caja"
+  },
+  {...}
+]
+```
+
+Con los siguientes campos:
+
+| Parameter       | Type         | Required?  | Description                                     |
+| -------------   |--------------|------------|-------------------------------------------------|
+| `compania`    | int          | required   |  Código de la CIA de donde se cargara el catalogo de cuentas - 101 AMIPHARMA. 
+
+
+
+Possible errors:
+
+| Error code           | Description                                                                                                          |
+| ---------------------|----------------------------------------------------------------------------------------------------------------------|
+| 400 Bad Request      | Required fields were invalid, not specified.                                                                         |
+| 401 Unauthorized     | The access token is invalid or has been revoked.                                                                     |
+| 403 Forbidden        | The user does not have permission to publish, or the authorId in the request path points to wrong/non-existent user. |
+
+
+
+
+
